@@ -16,4 +16,4 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 Ijzere pijpah ${{ job.status }}."
+      - run: echo "🍏 ohoho eem rutig ademhalen ${{ job.status }}."
