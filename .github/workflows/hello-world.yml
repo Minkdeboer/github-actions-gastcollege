@@ -15,13 +15,13 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}`
-      - run: echo "🍏 ohoho eem rutig ademhalen ${{ job.status }}."
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+      # Mijn werk achtung
       - name: Setup PHP with PECL extension
-      - uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
           extensions: imagick, swoole
-          #yfyf
-      - run: composer install 
-      - run: vendor/bin/phpstan analyse
+      - run: composer install
+      - run: ./vendor/bin/phpstan analyse
